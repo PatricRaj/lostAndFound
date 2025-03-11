@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav Bar */
+nav {
+    background: linear-gradient(45deg, #ff6a00, #ff9800);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Shadows Into Light', cursive;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* Head */
+.hero {
+    background: url('https://images.pexels.com/photos/8078392/pexels-photo-8078392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+    color: #ff6600;
+    text-align: center;
+    padding: 8rem 2rem;
+    position: relative;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    background-color: #ff9800;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #ff6a00;
+    transform: scale(1.1);
+}
+
+/* Report Item */
+.report-section {
+    padding: 6rem 2rem;
+    background: #fff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 0 6px 10px rgb(15, 13, 13);
+}
+
+.report-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ff6a00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Form  */
+.report-section .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.report-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.report-section input,
+.report-section select,
+.report-section textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
+    transition: border 0.3s ease;
+}
+
+.report-section input:focus,
+.report-section select:focus,
+.report-section textarea:focus {
+    border-color: #ff9800;
+    outline: none;
+}
+
+.report-section button {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #ff9800;
+    border: none;
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.report-section button:hover {
+    background-color: #ff6a00;
+}
+
+/* List */
+.listings {
+    padding: 6rem 2rem;
+    background-color: #f9f9f9;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+}
+
+.listings h2 {
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    color: #ff6a00;
+    animation: fadeInUp 1.5s ease-out; /* effect */
+}
+
+/* Items List */
+.items-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* grid */
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+/* Individual Item */
+.items-list .item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+    text-align: center;
+}
+
+/* Hover Effect for Item */
+.items-list .item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Item Title */
+.item h3 {
+    font-size: 2rem;
+    color: #ff6a00;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+/* Item Description */
+.item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/*Edit & Delete*/
+.item .btn {
+    padding: 0.6rem 1.5rem;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0.5rem;
+    display: inline-block;
+}
+
+/*Hover Effect */
+.item .btn:hover {
+    background-color: #ff6a00;
+    transform: scale(1.05);
+}
+
+/* Contact */
+.contact {
+    background-color: #333;
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.contact h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.contact a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Sign Up / Login */
+.signup-login {
+    padding: 5rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    text-align: center;
+}
+
+.signup-login h2 {
+    font-size: 2.5rem;
+    color: #ff6a00;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.signup-login input {
+    width: 80%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
+}
+
+.signup-login button {
+    width: 80%;
+    padding: 1.2rem;
+    background-color: #ff9800;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-login button:hover {
+    background-color: #ff6a00;
+}
+
+/* for Smaller Screens */
+@media (max-width: 768px) {
+    .items-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .item h3 {
+        font-size: 1.8rem;
+    }
+
+    .item p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .items-list {
+        grid-template-columns: 1fr;
+    }
+
+    .listings h2 {
+        font-size: 2.5rem;
+    }
+
+    .item h3 {
+        font-size: 1.6rem;
+    }
+
+    .item p {
+        font-size: 0.95rem;
+    }
+
+    .signup-login input,
+    .signup-login button {
+        width: 100%;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Report Item */
+.report-section {
+    padding: 6rem 2rem;
+    background: #fff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.report-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ff6a00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Form*/
+.report-section .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.report-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Input and textarea */
+.report-section input,
+.report-section select,
+.report-section textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
+    transition: border 0.3s ease;
+}
+
+/* File input */
+.report-section input[type="file"] {
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    background-color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.report-section input[type="file"]:hover {
+    background-color: #f9f9f9;
+    border-color: #ff9800;
+}
+
+/* Focus Effect */
+.report-section input:focus,
+.report-section select:focus,
+.report-section textarea:focus,
+.report-section input[type="file"]:focus {
+    border-color: #ff9800;
+    outline: none;
+}
+
+/* Submit Button */
+.report-section button {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #ff9800;
+    border: none;
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.report-section button:hover {
+    background-color: #ff6a00;
+}
+

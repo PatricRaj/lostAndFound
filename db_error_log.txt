@@ -1,0 +1,1 @@
+2025-03-10 19:54:34 - Connection failed: Access denied for user 'root'@'localhost' (using password: NO)

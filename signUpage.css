@@ -1,0 +1,74 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://images.pexels.com/photos/2859169/pexels-photo-2859169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+}
+.signup-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+    text-align: center;
+    width: 350px;
+}
+.signup-box h1 {
+    color: #ff3c00;
+    margin-bottom: 20px;
+    font-size:50px;
+}
+.input-box {
+    position: relative;
+    margin: 10px 0;
+}
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    color: black;
+    font-size: 16px;
+}
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: black;
+    transition: 0.3s;
+}
+.input-box input:focus ~ label, 
+.input-box input:valid ~ label {
+    top: -15px;
+    font-size: 12px;
+    color: #ff6600;
+}
+.terms {
+    color: black;
+    font-size: 14px;
+    margin: 10px 0;
+}
+.terms input {
+    margin-right: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #ff6600;
+    color: black;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}

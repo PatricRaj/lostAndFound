@@ -1,0 +1,144 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('https://images.pexels.com/photos/2859169/pexels-photo-2859169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover; /* Full screen background */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}
+
+/* Nav Bar */
+nav {
+    background: linear-gradient(45deg, #ff6a00, #ff9800);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Shadows Into Light', cursive;
+    text-transform: uppercase;
+    text-align: center;  
+    margin: 0; 
+}
+
+
+main {
+    margin-top: 80px;  
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+.edit-box {
+    background: rgba(85, 70, 70, 0.164);  
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(97, 87, 87, 0.041);
+    backdrop-filter: blur(1px);
+    text-align: center;
+    width: 350px;
+    z-index: 100; 
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+}
+/* Input Fields */
+.input-box {
+    position:center;
+    margin: 10px 0;
+    width: 100%;  
+}
+
+.input-box label {
+    position: center;
+    top: 0;
+    left: 0;
+    color: black;
+    font-size: 20px;
+    transition: 0.3s ease;
+    font-family:cursive;
+    font-weight: 900;
+}
+
+/* input fields and textarea alignment*/
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 3px solid #0e0d0d94;
+    outline:coral;
+    color: #0a0a0a;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:focus ~ label,
+.input-box textarea:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+    color: #ff6600;
+}
+
+/* Textarea */
+.input-box textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Buttons*/
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #ff6600;
+    color: black;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #e65c00;
+}
+
+/* Image */
+.input-box img {
+    margin-top: 10px;
+}
+
+/* Error message*/
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
